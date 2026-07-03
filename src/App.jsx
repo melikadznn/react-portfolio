@@ -2,14 +2,14 @@ import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import './index.css';
 
-// داده‌های داینامیک پروژه‌ها - آدرس عکس‌ها برای Vite اصلاح شد
+// داده‌های داینامیک پروژه‌ها
 const projectsData = [
   {
     id: "festival",
     tag: "Team Collaboration (Melika Dezhban & Kimia Moradi)",
     title: "Festival Website",
     description: "A modern, dynamic platform designed to showcase festival events, featuring an engaging glassmorphic UI.",
-    images: ["/public/images/carnaval1.png", "/public/images/carnaval2.png", "/public/images/carnaval3.png"],
+    images: ["/images/carnaval1.png", "/images/carnaval2.png", "/images/carnaval3.png"],
     reverse: false
   },
   {
@@ -33,6 +33,14 @@ const projectsData = [
 export default function App() {
   const [isShrunk, setIsShrunk] = useState(false);
 
+  // متغیرهای افکت تایپ خودکار
+  const words = ["UI/UX Designer", "Frontend Developer", "Computer Engineer"];
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [currentText, setCurrentText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+
+  // افکت اسکرول ناف‌بار
   useEffect(() => {
     const handleScroll = () => {
       setIsShrunk(window.scrollY > 50);
@@ -40,6 +48,32 @@ export default function App() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // افکت تایپ خودکار خط تیره چشمک‌زن
+  useEffect(() => {
+    const handleTyping = () => {
+      const fullWord = words[currentWordIndex];
+      
+      if (!isDeleting) {
+        setCurrentText(fullWord.substring(0, currentText.length + 1));
+        setTypingSpeed(100);
+      } else {
+        setCurrentText(fullWord.substring(0, currentText.length - 1));
+        setTypingSpeed(50);
+      }
+
+      if (!isDeleting && currentText === fullWord) {
+        setTypingSpeed(1500); 
+        setIsDeleting(true);
+      } else if (isDeleting && currentText === "") {
+        setIsDeleting(false);
+        setCurrentWordIndex((prev) => (prev + 1) % words.length);
+      }
+    };
+
+    const timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [currentText, isDeleting, currentWordIndex]);
 
   return (
     <>
@@ -56,17 +90,33 @@ export default function App() {
       </nav>
 
       <main>
-        {/* ۲. هیرو سکشن */}
-        <section id="home" className="hero-container">
-          <div className="content-column">
-            <div>
-              <div className="greeting">Hi, I'm <span className="highlight-red">Melika Dezhban</span></div>
-              <h1 className="main-headline">Computer Engineer</h1>
-              <p className="sub-headline">& Future M.Sc. Student</p>
-              <p className="bio-text">
-                Passionate about frontend development, creating immersive user experiences, and exploring modern web architectures.
-              </p>
-            </div>
+        {/* ۲. هیرو سکشن جدید و داینامیک (مطابق اسکرین‌شات) */}
+        <section id="home" className="hero-container-new">
+          {/* ستون چپ: متن ثابت و بیضی دور everything */}
+          <div className="hero-left">
+            <p className="hero-subtitle">Hello! I Am <span className="highlight-white">Melika Dezhban</span></p>
+            <h1 className="hero-title-main">
+              A Designer who loves to know <br />
+              <span className="everything-wrapper">
+                everything...
+          <svg className="oval-svg" viewBox="0 0 500 120" preserveAspectRatio="none">
+                <ellipse cx="199" cy="60" rx="212" ry="60" />
+          </svg>
+              </span>
+            </h1>
+            <p className="hero-caption">Because if the cover does not impress you what else can?</p>
+          </div>
+
+          {/* ستون راست: افکت تایپ خودکار */}
+          <div className="hero-right">
+            <h2 className="typing-header">
+              I'm a {currentText}
+              <span className="typing-cursor">|</span>
+            </h2>
+            <p className="hero-company">Currently, I'm a Computer Engineer & <span className="webhr-link">🌐 Frontend Developer</span></p>
+            <p className="hero-description">
+              Passionate about building responsive, high-performance web experiences and striking interface architectures that merge modern code with fluid user interfaces.
+            </p>
           </div>
         </section>
 
@@ -105,7 +155,6 @@ export default function App() {
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 
-                {/* دکمه اصلاح شد: تگ button حذف و استایل‌ها مستقیماً به Link داده شد */}
                 <Link 
                   to={`/project/${project.id}`}
                   className="github-btn" 

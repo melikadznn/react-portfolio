@@ -25,7 +25,7 @@ body {
     background-color: var(--bg-dark);
 }
 
-/* Base structural wrapper for sections to stack neatly */
+
 main {
     padding: 160px 2rem 5rem 2rem; 
     display: flex;
@@ -61,7 +61,7 @@ main {
     transition: transform 0.3s ease;
 }
 
-/* Navigation Links */
+/* Nav Links */
 .navbar .nav-links {
     display: flex;
     gap: 48px;
@@ -111,7 +111,7 @@ main {
     opacity: 0.7;
 }
 
-
+/* contact menu */
 .contact-menu-overlay {
     position: fixed;
     top: 0;
@@ -142,8 +142,6 @@ main {
     gap: 2rem;
     position: relative;
     border-left: 1px solid rgba(168, 85, 247, 0.2);
-    
-   
     transform: translateX(100%);
     transition: transform 0.3s ease;
 }
@@ -208,41 +206,41 @@ main {
     padding: 0 20px;
 }
 
-/* عنوان بخش مهارت‌ها */
+/* skills section */
 .section-title {
     font-size: 2rem;
-    color: #D696FF; /* بنفش روشن نئونی پالت جدید */
+    color: #D696FF; 
     margin-bottom: 40px;
     text-align: center;
     position: relative;
 }
 
-/* شبکه گرید برای چیدمان کارت‌ها (ریسپانسیو خودکار) */
+
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 30px;
 }
 
-/* استایل شیشه‌ای و نئونی کارت‌ها */
+
 .skills-card {
-    background: rgba(13, 6, 20, 0.5); /* لایه تاریک نیمه‌شفاف */
+    background: rgba(13, 6, 20, 0.5); 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(214, 150, 255, 0.1); /* مرز بسیار ظریف بنفش */
+    border: 1px solid rgba(214, 150, 255, 0.1); 
     padding: 2rem;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-/* افکت حرکت کارت در حالت هوور */
+
 .skills-card:hover {
     transform: translateY(-5px);
-    border-color: #A83279; /* تغییر رنگ مرز به ارغوانی در حالت هوور */
+    border-color: #A83279; 
 }
 
-/* عنوان هر کارت */
+
 .skills-card h3 {
     color: #F8F5FC;
     font-size: 1.25rem;
@@ -251,17 +249,17 @@ main {
     padding-bottom: 8px;
 }
 
-/* مجموعه دکمه‌های مهارت */
+
 .skills-list {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-/* آیتم‌های تکی (Tags) */
+
 .skill-item {
     background: rgba(255, 255, 255, 0.05);
-    color: #9D8FA9; /* رنگ متن کم‌اهمیت پالت شما */
+    color: #9D8FA9; 
     padding: 8px 14px;
     border-radius: 8px;
     font-size: 0.95rem;
@@ -270,7 +268,7 @@ main {
     transition: all 0.2s ease;
 }
 
-/* هوور روی تک‌تک تگ‌های مهارت */
+
 .skill-item:hover {
     background: rgba(214, 150, 255, 0.1);
     color: #F8F5FC;
@@ -293,10 +291,6 @@ main {
     justify-content: center; 
     gap: 60px; 
 }
-
-
-
-
 
 .greeting {
     font-size: 1.1rem;
@@ -386,87 +380,7 @@ main {
     max-width: 600px;
 }
 
-/* ==========================================
-   Work Experience Section (Fixed Positioning!)
-   ========================================== */
-/* .work-experience {
 
-    max-width: 1200px;
-    width: 100%;
-    text-align: center;
-    padding: 4rem 2rem;
-    margin: 0 auto;
-   
-   
-}
-
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 3rem;
-     
-}
-
-.experience-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    
-    
-}
-
-.experience-card {
-    background-color:#43213a;
-    border: 1px solid rgba(168, 85, 247, 0.2);
-    border-radius: 16px;
-    padding: 2.5rem;
-    display: flex;
-    gap: 1.5rem;
-
-    transition: all 0.35s ease;
-}
-
-.experience-card:hover {
-    transform: translateY(-6px) scale(1.02);
-
-    box-shadow:
-        0 15px 40px rgba(181, 123, 238, 0.25),
-        0 0 30px rgba(181, 123, 238, 0.15);
-
-    border-color: #FDF0D5;
-}
-
-
-.card-icon img {
-    width: 50px;
-    height: auto;
-}
-
-.card-content h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-    font-weight: 600;
-}
-
-.card-content p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.learn-more {
-    color: var(--text-white);
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: color 0.2s;
-}
-
-.learn-more:hover {
-    color: var(--red-accent);
-}
 
 /* Responsiveness Media Queries */
 @media (max-width: 900px) {
@@ -491,6 +405,7 @@ main {
         margin: 0 auto 2rem auto;
     }
 } */
+/* education section  */
 .education-section {
     max-width: 1100px;
     width: 100%;
@@ -498,18 +413,19 @@ main {
     padding: 0 20px;
 }
 
-/* کانتینر اصلی کارت‌ها */
+
 .timeline-container {
     display: flex;
     flex-direction: column;
     gap: 25px;
     max-width: 800px;
-    margin: 0 auto; /* قرار گرفتن کل بخش در وسط صفحه */
+    margin: 0 auto; 
 }
 
-/* استایل عمومی کارت‌های تحصیلی */
+
 .timeline-card {
     background: rgba(13, 6, 20, 0.5);
+    width:50rem;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(214, 150, 255, 0.1);
@@ -520,26 +436,26 @@ main {
 }
 
 .timeline-card:hover {
-    transform: translateX(-5px); /* افکت جابه‌جایی کوچک به سمت چپ موقع هوور */
+    transform: translateX(-5px); 
     border-color: #D696FF;
 }
 
-/* استایل اختصاصی برای کارشناسی ارشد (چون لول بالاتری دارد و آینده است) */
+
 .timeline-card.upcoming {
-    border-left: 4px solid #A83279; /* خط ارغوانی شاخص در سمت چپ کارت */
+    border-left: 4px solid #A83279; 
     background: rgba(168, 50, 121, 0.05);
 }
 
-/* عنوان رشته */
+
 .timeline-card h3 {
     color: #F8F5FC;
     font-size: 1.35rem;
     margin-bottom: 8px;
 }
 
-/* نام دانشگاه */
+
 .timeline-card .institution {
-    color: #D696FF; /* بنفش روشن نئونی */
+    color: #D696FF;
     font-size: 1.05rem;
     font-weight: 500;
     margin-bottom: 5px;
@@ -547,11 +463,11 @@ main {
 
 /* وضعیت/زمان */
 .timeline-card .duration {
-    color: #9D8FA9; /* رنگ متن کم‌اهمیت پالت شما */
+    color: #9D8FA9; 
     font-size: 0.9rem;
 }
 
-/* نشان‌های کوچک بالای کارت‌ها (Badges) */
+
 .card-badge {
     position: absolute;
     top: 20px;
@@ -570,7 +486,7 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* جابه‌جایی بج‌ها در موبایل برای اینکه روی متن نیایند */
+
 @media (max-width: 600px) {
     .card-badge {
         position: static;
@@ -579,9 +495,7 @@ main {
     }
 }
 
-
-
-fuatured part
+/* fuatured part */
 .Featured-Project{
  display:grid;
  grid-template-columns: 1fr 1fr;
@@ -604,9 +518,7 @@ fuatured part
     margin-top: 30px;
     border-radius: 10px;
     backdrop-filter: blur;
-    
 
-    
 }
 .featured-box p{
     font-size: large;
@@ -657,15 +569,15 @@ fuatured part
     margin-bottom: 120px;
 }
 
-/* پروژه دوم را برعکس می‌کند تا یکی در میان چپ و راست باشند */
+
 .project-row.reverse {
-    direction: rtl; /* برای برعکس شدن موقعیت متن و عکس */
+    direction: rtl;
 }
 .project-row.reverse .project-meta {
-    direction: ltr; /* بازگرداندن تراز متن انگلیسی به حالت عادی */
+    direction: ltr;
 }
 
-/* بخش متنی پروژه */
+
 .project-meta .project-tag {
     color: #A83279;
     font-size: 0.9rem;
@@ -684,17 +596,15 @@ fuatured part
     line-height: 1.6;
 }
 
-/* ===================================================
-   بخش اصلی: استایل کانتینر آلبوم عکس‌ها
-   =================================================== */
+/* project images */
 .project-album {
     position: relative;
     width: 100%;
-    height: 280px; /* ارتفاع متناسب با ابعاد تصاویر شما */
+    height: 280px; 
     cursor: pointer;
 }
 
-/* استایل عمومی تمام عکس‌های داخل آلبوم */
+
 .album-img {
     position: absolute;
     width: 85%;
@@ -703,12 +613,10 @@ fuatured part
     border-radius: 16px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    
-    /* انیمیشن نرم برای زمان پخش شدن عکس‌ها */
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), z-index 0.4s;
 }
 
-/* چیدمان اولیه عکس‌ها روی همدیگر با زاویه‌های مختلف */
+
 .img-front {
     z-index: 3;
     transform: rotate(-2deg);
@@ -726,9 +634,7 @@ fuatured part
     opacity: 0.7;
 }
 
-/* ===================================================
-   افکت هوور: وقتی موس روی آلبوم می‌رود، عکس‌ها باز می‌شوند
-   =================================================== */
+/* album hover */
 .project-album:hover .img-front {
     transform: rotate(0deg) translate(0, -10px);
 }
@@ -743,7 +649,7 @@ fuatured part
     opacity: 1;
 }
 
-/* ریسپانسیو برای موبایل */
+/* phone responsive */
 @media (max-width: 768px) {
     .project-row, .project-row.reverse {
         grid-template-columns: 1fr;
@@ -754,37 +660,34 @@ fuatured part
         height: 220px;
     }
 }
-/* کانتینر اصلی فوتر */
+/* footer main container */
 .main-footer {
     width: 100%;
-    background: rgba(13, 6, 20, 0.6); /* شیشه‌ای تیره هماهنگ با پس‌زمینه */
+    background: rgba(13, 6, 20, 0.6); 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    
-    /* دو خط بنفش جداکننده بالا و پایین که خواسته بودی */
     border-top: 2px solid rgba(214, 150, 255, 0.2);
     border-bottom: 2px solid rgba(214, 150, 255, 0.2);
-    
     padding: 60px 0 20px 0;
-    margin-top: 120px; /* فاصله انداختن از بخش قبلی پروژه‌ات */
+    margin-top: 120px;
 }
 
-/* شبکه بندی بخش‌های داخل فوتر */
+
 .footer-container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr; /* بخش برند کمی عریض‌تر است */
+    grid-template-columns: 2fr 1fr 1fr; 
     gap: 50px;
 }
 
-/* استایل بخش برندینگ */
+
 .footer-brand .footer-logo {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
     font-weight: bold;
-    color: #D696FF; /* بنفش نئونی روشن */
+    color: #D696FF; 
     margin-bottom: 10px;
 }
 
@@ -800,7 +703,7 @@ fuatured part
     line-height: 1.5;
 }
 
-/* استایل بخش لینک‌ها */
+
 .footer-links h4, .footer-socials h4 {
     color: #F8F5FC;
     font-size: 1.1rem;
@@ -825,13 +728,13 @@ fuatured part
     transition: color 0.2s ease, padding-left 0.2s ease;
 }
 
-/* افکت حرکت لینک‌ها موقع هوور */
+
 .footer-links ul li a:hover {
     color: #D696FF;
     padding-left: 5px;
 }
 
-/* استایل آیکون‌های شبکه‌های اجتماعی */
+
 .social-icons {
     display: flex;
     gap: 15px;
@@ -851,7 +754,7 @@ fuatured part
     transition: all 0.3s ease;
 }
 
-/* افکت درخشش آیکون‌ها موقع هوور */
+
 .social-icons a:hover {
     background: rgba(168, 50, 121, 0.2);
     border-color: #D696FF;
@@ -859,7 +762,7 @@ fuatured part
     box-shadow: 0 0 15px rgba(214, 150, 255, 0.3);
 }
 
-/* بخش کپی رایتِ انتهای فوتر */
+/* copy right */
 .footer-bottom {
     max-width: 1100px;
     margin: 40px auto 0 auto;
@@ -874,13 +777,13 @@ fuatured part
 }
 
 @media (max-width: 768px) {
-    /* تنظیم پدینگ کانتینر اصلی در موبایل */
+  
     main {
         padding: 120px 1rem 3rem 1rem;
         gap: 5rem;
     }
 
-    /* هدر در موبایل */
+  
     .navbar {
         padding: 0 5%;
         height: 85px;
@@ -904,7 +807,7 @@ fuatured part
         height: 40px;
     }
 
-    /* هیرو سکشن تک‌ستونه در موبایل */
+  
     .content-column {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -925,7 +828,6 @@ fuatured part
         font-size: 1rem;
     }
 
-    /* تراز شدن نشان‌های کارت تحصیلی */
     .card-badge {
         position: static;
         display: inline-block;
@@ -935,14 +837,14 @@ fuatured part
         padding: 1.5rem;
     }
     .timeline-card:hover {
-        transform: translateY(-3px); /* جابه‌جایی عمودی در موبایل بهتر است */
+        transform: translateY(-3px); 
     }
 
-    /* تک‌ستونه شدن پروژه و لغو حالت معکوس آلبوم */
+
     .project-row, .project-row.reverse {
         grid-template-columns: 1fr;
         gap: 30px;
-        direction: ltr; /* یکپارچه‌سازی جهت نمایش در موبایل */
+        direction: ltr; 
     }
     .project-meta h3 {
         font-size: 1.6rem;
@@ -951,7 +853,7 @@ fuatured part
         height: 220px;
         width: 100%;
     }
-    /* در موبایل میزان پخش شدن آلبوم کمتر می‌شود تا از صفحه بیرون نزند */
+
     .project-album:hover .img-middle {
         transform: rotate(4deg) translate(20px, 10px);
     }
@@ -959,7 +861,7 @@ fuatured part
         transform: rotate(-5deg) translate(-20px, 10px);
     }
 
-    /* فوتر در موبایل */
+
     .footer-container {
         grid-template-columns: 1fr;
         gap: 35px;
@@ -970,3 +872,104 @@ fuatured part
     }
 }
 
+.hero-container-new {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 8% 80px 8%;
+  gap: 50px;
+  min-height: 80vh;
+}
+
+.hero-left, .hero-right {
+  flex: 1;
+}
+
+.hero-subtitle {
+  color: #bfa1db;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.highlight-white {
+  color: #fff;
+  font-weight: bold;
+}
+
+.hero-title-main {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+
+.everything-wrapper {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+}
+
+.oval-svg {
+  position: absolute;
+  top: -15%;
+  left: -5%;
+  width: 130%;
+  height: 140%;
+  fill: none;
+  stroke:#D696FF; 
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: drawOval 2s ease-in-out forwards;
+}
+
+@keyframes drawOval {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.hero-caption {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* استایل‌های بخش تایپ خودکار سمت راست */
+.typing-header {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+  min-height: 80px; /* جلوگیری از پرش متن */
+}
+
+.typing-cursor {
+  display: inline-block;
+  color: #ff3366;
+  animation: blink 0.7s infinite;
+  margin-left: 5px;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.hero-company {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 20px 0;
+}
+
+.webhr-link {
+  color: #8ac4ff;
+  font-weight: 600;
+}
+
+.hero-description {
+  color: #aaa;
+  line-height: 1.6;
+  font-size: 1rem;
+  max-width: 500px;
+}
