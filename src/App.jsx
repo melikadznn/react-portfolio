@@ -104,7 +104,7 @@ export default function App() {
           </svg>
               </span>
             </h1>
-            <p className="hero-caption">Because if the cover does not impress you what else can?</p>
+            <p className="hero-caption">Because once you immerse yourself in web development, there's no looking back.</p>
           </div>
 
           {/* ستون راست: افکت تایپ خودکار */}
@@ -113,7 +113,7 @@ export default function App() {
               I'm a {currentText}
               <span className="typing-cursor">|</span>
             </h2>
-            <p className="hero-company">Currently, I'm a Computer Engineer & <span className="webhr-link">🌐 Frontend Developer</span></p>
+            <p className="hero-company">Currently, I'm a freelancer and master degree student </p>
             <p className="hero-description">
               Passionate about building responsive, high-performance web experiences and striking interface architectures that merge modern code with fluid user interfaces.
             </p>
@@ -131,7 +131,7 @@ export default function App() {
                 <span className="skill-item">CSS3 / Grid / Flexbox</span>
                 <span className="skill-item">JavaScript (ES6+)</span>
                 <span className="skill-item">React.js</span>
-                <span className="skill-item">PHP</span>
+                <span className="skill-item">Node.js</span>
               </div>
             </div>
             <div className="skills-card">
