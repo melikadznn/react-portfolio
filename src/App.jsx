@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import './index.css';
 
-// داده‌های داینامیک پروژه‌ها
+// project data
 const projectsData = [
   {
     id: "festival",
@@ -33,14 +33,14 @@ const projectsData = [
 export default function App() {
   const [isShrunk, setIsShrunk] = useState(false);
 
-  // متغیرهای افکت تایپ خودکار
+  // typing effect data
   const words = ["UI/UX Designer", "Frontend Developer", "Computer Engineer"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  // افکت اسکرول ناف‌بار
+  // Navbar scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsShrunk(window.scrollY > 50);
@@ -49,7 +49,7 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // افکت تایپ خودکار خط تیره چشمک‌زن
+ 
   useEffect(() => {
     const handleTyping = () => {
       const fullWord = words[currentWordIndex];
@@ -77,7 +77,7 @@ export default function App() {
 
   return (
     <>
-      {/* ۱. هدر / ناف‌بار */}
+      {/* header and navbar*/}
       <nav className={`navbar ${isShrunk ? 'shrunk' : ''}`}>
         <img src="/public/images/logo.svg" alt="Logo" />
         <ul className="nav-links">
@@ -90,9 +90,9 @@ export default function App() {
       </nav>
 
       <main>
-        {/* ۲. هیرو سکشن جدید و داینامیک (مطابق اسکرین‌شات) */}
+        {/*hero section*/}
         <section id="home" className="hero-container-new">
-          {/* ستون چپ: متن ثابت و بیضی دور everything */}
+         
           <div className="hero-left">
             <p className="hero-subtitle">Hello! I Am <span className="highlight-white">Melika Dezhban</span></p>
             <h1 className="hero-title-main">
@@ -107,7 +107,7 @@ export default function App() {
             <p className="hero-caption">Because once you immerse yourself in web development, there's no looking back.</p>
           </div>
 
-          {/* ستون راست: افکت تایپ خودکار */}
+          {/* typing effect*/}
           <div className="hero-right">
             <h2 className="typing-header">
               I'm a {currentText}
@@ -120,7 +120,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* ۳. بخش مهارت‌ها */}
+        {/* skills*/}
         <section id="skills" className="skills-section">
           <h2 className="section-title">My Skills</h2>
           <div className="skills-container">
@@ -145,7 +145,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* ۴. بخش پروژه‌ها */}
+        {/* projects*/}
         <section id="projects" className="projects-section">
           <h2 className="section-title">Featured Projects</h2>
           {projectsData.map((project) => (
@@ -173,7 +173,7 @@ export default function App() {
                 </Link>
               </div>
               
-              {/* کانتینر آلبوم عکس‌ها */}
+              {/* images album*/}
               <div className="project-album">
                 <img src={project.images[0]} alt="Front" className="album-img img-front" />
                 <img src={project.images[1]} alt="Middle" className="album-img img-middle" />
@@ -183,7 +183,7 @@ export default function App() {
           ))}
         </section>
 
-        {/* ۵. بخش تحصیلات */}
+        {/* academic*/}
         <section id="education" className="education-section">
           <h2 className="section-title">Education</h2>
           <div className="timeline-container">
@@ -203,7 +203,7 @@ export default function App() {
         </section>
       </main>
 
-      {/* ۶. فوتر */}
+      {/* footer*/}
       <footer className="main-footer">
         <div className="footer-container">
           <div className="footer-brand">

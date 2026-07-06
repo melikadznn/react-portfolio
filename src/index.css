@@ -937,12 +937,12 @@ main {
   font-size: 0.95rem;
 }
 
-/* استایل‌های بخش تایپ خودکار سمت راست */
+
 .typing-header {
   font-size: 3.5rem;
   font-weight: 700;
   color: #fff;
-  min-height: 80px; /* جلوگیری از پرش متن */
+  min-height: 80px; 
 }
 
 .typing-cursor {
